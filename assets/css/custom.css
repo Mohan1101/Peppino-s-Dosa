@@ -1,0 +1,893 @@
+/* Custom CSS to override default styles */
+
+/* WHITE THEME WITH GOLD ACCENTS */
+
+/* Override body background to white */
+body {
+  background-color: var(--white) !important;
+  color: var(--eerie-black-1) !important;
+  height: auto !important;
+  min-height: 100vh;
+  overflow-x: hidden !important;
+}
+
+html {
+  overflow-x: hidden !important;
+  scroll-behavior: smooth !important;
+}
+
+/* Make header sticky and always visible with white background */
+.header.hide {
+  transform: translateY(0) !important;
+  transition-delay: 0ms !important;
+}
+
+/* Header styling for white theme */
+.header {
+  position: fixed !important;
+  top: 0 !important;
+  width: 100% !important;
+  z-index: 50 !important;
+  background-color: var(--white) !important;
+  border-bottom: 1px solid var(--gold-crayola) !important;
+  transition: background-color 0.3s ease, padding 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Fix header scroll behavior - keep white background */
+.header.active {
+  background-color: var(--white) !important;
+  border-bottom: 2px solid var(--gold-crayola) !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+}
+
+/* Force white background on all header states */
+.header,
+.header.active,
+.header.hide {
+  background-color: var(--white) !important;
+}
+
+/* Override any dark background from original CSS */
+.header.active {
+  background-color: var(--white) !important;
+  border-color: var(--gold-crayola) !important;
+}
+
+/* Ensure header never gets dark background */
+.header[style*="background"] {
+  background-color: var(--white) !important;
+}
+
+/* Additional header background overrides */
+.header * {
+  background-color: transparent !important;
+}
+
+.header .container {
+  background-color: transparent !important;
+}
+
+/* Force header to always be white with high specificity */
+html body .header,
+html body .header.active,
+html body .header.hide {
+  background-color: var(--white) !important;
+  background: var(--white) !important;
+}
+
+/* Topbar styling for white theme */
+.topbar {
+  background-color: var(--white) !important;
+  color: var(--eerie-black-1) !important;
+  border-bottom: 1px solid var(--gold-crayola) !important;
+  transition: background-color 0.3s ease !important;
+}
+
+/* Adjust anchor scroll position to account for fixed header */
+:target {
+  scroll-margin-top: 120px !important;
+}
+
+/* Add margin to content sections */
+.mt-32 {
+  margin-top: 8rem !important;
+}
+
+/* Add padding to main content to account for fixed header */
+main {
+  padding-top: 100px !important;
+}
+
+/* Navigation styling for white theme */
+.navbar {
+  background-color: var(--white) !important;
+  color: var(--eerie-black-1) !important;
+}
+
+.navbar-link {
+  color: var(--eerie-black-1) !important;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  color: var(--gold-crayola) !important;
+}
+
+/* Fix navbar text visibility */
+.navbar-title,
+.navbar-text,
+.sidebar-link,
+.contact-label,
+.contact-number {
+  color: var(--eerie-black-1) !important;
+}
+
+.contact-number:hover,
+.sidebar-link:hover {
+  color: var(--gold-crayola) !important;
+}
+
+/* Fix navbar background on scroll - prevent brown background */
+.header.active .navbar {
+  background-color: var(--white) !important;
+}
+
+/* Complete navbar styling override */
+.navbar {
+  background-color: var(--white) !important;
+}
+
+.navbar-list {
+  border-color: rgba(0,0,0,0.1) !important;
+}
+
+.navbar-item {
+  border-color: rgba(0,0,0,0.1) !important;
+}
+
+.navbar-link {
+  color: var(--eerie-black-1) !important;
+}
+
+.navbar-link .span {
+  color: var(--eerie-black-1) !important;
+}
+
+.navbar-link:is(:hover, :focus-visible, .active) .span {
+  color: var(--gold-crayola) !important;
+}
+
+.navbar-title {
+  color: var(--eerie-black-1) !important;
+}
+
+.navbar-text {
+  color: var(--eerie-black-1) !important;
+}
+
+.navbar .body-4 {
+  color: var(--eerie-black-1) !important;
+}
+
+/* Close button styling */
+.close-btn {
+  color: var(--eerie-black-1) !important;
+  background-color: transparent !important;
+  border-color: var(--eerie-black-1) !important;
+}
+
+.close-btn:hover {
+  color: var(--gold-crayola) !important;
+  border-color: var(--gold-crayola) !important;
+}
+
+/* Nav toggle button styling */
+.nav-open-btn .line {
+  background-color: var(--eerie-black-1) !important;
+}
+
+/* Button styling for white theme */
+.btn-primary {
+  background-color: var(--gold-crayola) !important;
+  color: var(--eerie-black-1) !important;
+  border: 2px solid var(--gold-crayola) !important;
+}
+
+.btn-primary:hover {
+  background-color: transparent !important;
+  color: var(--gold-crayola) !important;
+}
+
+.btn-secondary {
+  background-color: transparent !important;
+  color: var(--gold-crayola) !important;
+  border: 2px solid var(--gold-crayola) !important;
+}
+
+.btn-secondary:hover {
+  background-color: var(--gold-crayola) !important;
+  color: var(--eerie-black-1) !important;
+}
+
+/* Section backgrounds for white theme */
+.section {
+  background-color: var(--white) !important;
+  color: var(--eerie-black-1) !important;
+}
+
+/* Fix container centering and max-width */
+.container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding-inline: 16px !important;
+}
+
+/* Ensure sections are properly centered */
+.about .container,
+.menu .container,
+.testi .container,
+.features .container,
+.event .container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+/* Override dark section backgrounds */
+.bg-black-10 {
+  background-color: #f8f9fa !important;
+}
+
+/* Hero section styling */
+.hero {
+  background-color: var(--white) !important;
+}
+
+.hero-title,
+.hero-text {
+  color: var(--eerie-black-1) !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+}
+
+.section-subtitle {
+  color: var(--gold-crayola) !important;
+}
+
+/* Service section styling */
+.service {
+  background-color: var(--white) !important;
+}
+
+.service-card {
+  background-color: var(--white) !important;
+  border: 1px solid var(--gold-crayola) !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+}
+
+.card-title {
+  color: var(--eerie-black-1) !important;
+}
+
+.card-title:hover {
+  color: var(--gold-crayola) !important;
+}
+
+/* About section styling */
+.about {
+  background-color: var(--white) !important;
+}
+
+/* Special dish section styling */
+.special-dish {
+  background-color: var(--white) !important;
+}
+
+.special-dish-content {
+  background-color: #f8f9fa !important;
+}
+
+/* Menu section styling */
+.menu {
+  background-color: var(--white) !important;
+}
+
+.menu-card {
+  background-color: var(--white) !important;
+  border: 1px solid #e9ecef !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  padding: 20px !important;
+  margin: 10px 0 !important;
+  transition: all 0.3s ease !important;
+}
+
+.menu-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
+  border-color: var(--gold-crayola) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Fix card hover - make title gold on card hover, not just text hover */
+.menu-card:hover .card-title {
+  color: var(--gold-crayola) !important;
+}
+
+.service-card:hover .card-title {
+  color: var(--gold-crayola) !important;
+}
+
+.event-card:hover .card-title {
+  color: var(--gold-crayola) !important;
+}
+
+/* Features section styling */
+.features {
+  background-color: var(--white) !important;
+}
+
+.feature-card {
+  background-color: var(--white) !important;
+  border: 1px solid #e9ecef !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+/* Event section styling */
+.event {
+  background-color: var(--white) !important;
+}
+
+.event-card {
+  background-color: var(--white) !important;
+  border: 1px solid #e9ecef !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+/* Reservation section styling */
+.reservation {
+  background-color: var(--white) !important;
+  color: var(--eerie-black-1) !important;
+}
+
+.form-left {
+  background-color: var(--white) !important;
+}
+
+.form-right {
+  background-color: #f8f9fa !important;
+  color: var(--eerie-black-1) !important;
+}
+
+/* Online reservation section comprehensive styling */
+.reservation {
+  background-color: var(--white) !important;
+  padding: 80px 0 !important;
+}
+
+.reservation .section-title,
+.reservation .section-subtitle,
+.reservation .section-text {
+  color: var(--eerie-black-1) !important;
+}
+
+.reservation .headline-1,
+.reservation .headline-2 {
+  color: var(--eerie-black-1) !important;
+  font-weight: var(--weight-bold) !important;
+  margin-bottom: 20px !important;
+}
+
+.reservation .contact-label {
+  color: var(--eerie-black-1) !important;
+  font-weight: var(--weight-bold) !important;
+}
+
+.reservation .contact-number {
+  color: var(--gold-crayola) !important;
+}
+
+.reservation .body-4 {
+  color: var(--eerie-black-1) !important;
+}
+
+/* Enhanced reservation form styling */
+.reservation-form {
+  background-color: var(--white) !important;
+  border-radius: 15px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+  overflow: hidden !important;
+  margin-top: 0 !important;
+}
+
+.form-left {
+  background-color: var(--white) !important;
+  padding: 50px 40px !important;
+}
+
+.form-left .headline-1 {
+  color: var(--eerie-black-1) !important;
+  font-size: 2.5rem !important;
+  margin-bottom: 30px !important;
+  position: relative !important;
+}
+
+.form-left .headline-1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--gold-crayola);
+}
+
+/* Form right section text */
+.form-right {
+  background-color: #e9ecef !important;
+  padding: 50px 40px !important;
+  position: relative !important;
+}
+
+.form-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(233,236,239,0.95), rgba(233,236,239,0.95)) !important;
+  z-index: 1;
+}
+
+.form-right > * {
+  position: relative;
+  z-index: 2;
+}
+
+.form-right .headline-1 {
+  color: var(--eerie-black-1) !important;
+  margin-bottom: 30px !important;
+}
+
+.form-right .contact-label {
+  color: var(--eerie-black-1) !important;
+  font-weight: var(--weight-bold) !important;
+  margin-bottom: 10px !important;
+}
+
+.form-right .body-1 {
+  color: var(--gold-crayola) !important;
+  font-weight: var(--weight-bold) !important;
+}
+
+.form-right .body-4 {
+  color: var(--eerie-black-1) !important;
+  line-height: 1.6 !important;
+}
+
+/* Additional reservation section improvements */
+.reservation .container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+/* Input wrapper improvements */
+.input-wrapper {
+  display: flex !important;
+  gap: 15px !important;
+  margin-bottom: 20px !important;
+}
+
+.input-wrapper .input-field {
+  flex: 1 !important;
+}
+
+/* Button styling in reservation form */
+.form-left .btn {
+  background-color: var(--gold-crayola) !important;
+  color: var(--eerie-black-1) !important;
+  border: 2px solid var(--gold-crayola) !important;
+  padding: 15px 30px !important;
+  font-weight: var(--weight-bold) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  transition: all 0.3s ease !important;
+}
+
+.form-left .btn:hover {
+  background-color: transparent !important;
+  color: var(--gold-crayola) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(218, 165, 32, 0.3) !important;
+}
+
+/* Separator styling in form */
+.form-right .separator {
+  background-color: var(--gold-crayola) !important;
+  margin: 25px auto !important;
+}
+
+/* Footer styling - Keep original dark theme but change newsletter section */
+.footer {
+  background-color: var(--eerie-black-1) !important;
+  color: var(--white) !important;
+}
+
+/* Only change the newsletter/subscription section to white/gray */
+.footer-brand {
+  background-color: var(--white) !important;
+  color: var(--eerie-black-1) !important;
+  border: 2px solid var(--gold-crayola) !important;
+}
+
+.footer-brand .logo img {
+  filter: none !important;
+}
+
+.footer-brand .body-4,
+.footer-brand .label-1 {
+  color: var(--eerie-black-1) !important;
+}
+
+.footer-brand .contact-link {
+  color: var(--eerie-black-1) !important;
+}
+
+.footer-brand .contact-link:hover {
+  color: var(--gold-crayola) !important;
+}
+
+.footer-brand .label-1 .span {
+  color: var(--eerie-black-1) !important;
+}
+
+/* Newsletter input styling */
+.footer-brand .input-field {
+  background-color: var(--white) !important;
+  color: var(--eerie-black-1) !important;
+  border: 1px solid var(--gold-crayola) !important;
+}
+
+.footer-brand .input-field::placeholder {
+  color: #6c757d !important;
+}
+
+.footer-brand .btn {
+  background-color: var(--gold-crayola) !important;
+  color: var(--eerie-black-1) !important;
+}
+
+.footer-brand .btn:hover {
+  background-color: var(--eerie-black-1) !important;
+  color: var(--gold-crayola) !important;
+}
+
+/* Preloader styling */
+.preload {
+  background-color: var(--white) !important;
+}
+
+.preload .text {
+  color: var(--gold-crayola) !important;
+}
+
+/* Text colors for white theme */
+.headline-1,
+.headline-2,
+.title-1,
+.title-2,
+.title-3,
+.title-4 {
+  color: var(--eerie-black-1) !important;
+}
+
+.body-1,
+.body-2,
+.body-3,
+.body-4 {
+  color: var(--eerie-black-1) !important;
+}
+
+.label-1,
+.label-2 {
+  color: var(--eerie-black-1) !important;
+}
+
+/* Gold accent elements */
+.separator {
+  background-color: var(--gold-crayola) !important;
+}
+
+/* Topbar text colors */
+.topbar .span,
+.topbar-item {
+  color: var(--eerie-black-1) !important;
+}
+
+.topbar-item:hover {
+  color: var(--gold-crayola) !important;
+}
+
+/* Testimonial section styling */
+.testi {
+  background-color: var(--white) !important;
+  position: relative;
+}
+
+.testi::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)) !important;
+  z-index: 1;
+}
+
+.testi .container {
+  position: relative;
+  z-index: 2;
+}
+
+.testi-text,
+.profile-name {
+  color: var(--eerie-black-1) !important;
+}
+
+.quote {
+  color: var(--gold-crayola) !important;
+}
+
+/* Fix testimonial profile image */
+.profile .img {
+  display: block !important;
+  width: 100px !important;
+  height: 100px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  margin: 0 auto 15px auto !important;
+  border: 3px solid var(--gold-crayola) !important;
+}
+
+/* Form styling */
+.input-field,
+.textarea {
+  background-color: var(--white) !important;
+  border: 1px solid #e9ecef !important;
+  color: var(--eerie-black-1) !important;
+}
+
+.input-field:focus,
+.textarea:focus {
+  border-color: var(--gold-crayola) !important;
+}
+
+/* Comprehensive reservation form styling */
+.reservation-form {
+  background-color: var(--white) !important;
+}
+
+.form-text {
+  color: var(--eerie-black-1) !important;
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+}
+
+.form-text .link {
+  color: var(--gold-crayola) !important;
+  font-weight: var(--weight-bold) !important;
+  text-decoration: underline !important;
+}
+
+.form-text .link:hover {
+  color: var(--eerie-black-1) !important;
+}
+
+.icon-wrapper {
+  background-color: var(--white) !important;
+  border: 1px solid #e9ecef !important;
+  border-radius: 5px !important;
+  transition: border-color 0.3s ease !important;
+}
+
+.icon-wrapper ion-icon {
+  color: var(--eerie-black-1) !important;
+}
+
+.icon-wrapper:focus-within {
+  border-color: var(--gold-crayola) !important;
+  box-shadow: 0 0 0 2px rgba(218, 165, 32, 0.2) !important;
+}
+
+/* Select dropdown styling */
+select.input-field {
+  background-color: var(--white) !important;
+  color: var(--eerie-black-1) !important;
+  cursor: pointer !important;
+}
+
+select.input-field option {
+  background-color: var(--white) !important;
+  color: var(--eerie-black-1) !important;
+}
+
+/* Input placeholder styling */
+.input-field::placeholder {
+  color: #6c757d !important;
+  opacity: 0.8 !important;
+}
+
+/* Textarea styling */
+textarea.input-field {
+  background-color: var(--white) !important;
+  color: var(--eerie-black-1) !important;
+  border: 1px solid #e9ecef !important;
+  border-radius: 5px !important;
+  resize: vertical !important;
+  min-height: 120px !important;
+}
+
+/* Input field focus states */
+.input-field:focus {
+  border-color: var(--gold-crayola) !important;
+  box-shadow: 0 0 0 2px rgba(218, 165, 32, 0.2) !important;
+  outline: none !important;
+}
+
+/* Card text styling */
+.card-text {
+  color: var(--eerie-black-1) !important;
+}
+
+/* Price styling */
+.span.body-1 {
+  color: var(--gold-crayola) !important;
+}
+
+/* Hero section overlay for better text visibility */
+.hero .slider-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3)) !important;
+  z-index: 1;
+}
+
+.hero .slider-item > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Ensure hero text is visible on dark background images */
+.hero .hero-title {
+  color: var(--white) !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+}
+
+.hero .hero-text {
+  color: var(--white) !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;
+}
+
+.hero .section-subtitle {
+  color: var(--gold-crayola) !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;
+}
+
+/* Background shapes styling - make them subtle */
+.shape {
+  opacity: 0.1 !important;
+  filter: grayscale(50%) !important;
+}
+
+/* Ensure background images don't interfere with text */
+.has-bg-image {
+  position: relative;
+}
+
+.has-bg-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  z-index: 1;
+}
+
+.has-bg-image > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .header,
+  .header.active,
+  .header.hide {
+    background-color: var(--white) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  }
+
+  .navbar {
+    background-color: var(--white) !important;
+  }
+
+  .topbar {
+    background-color: var(--white) !important;
+  }
+
+  /* Make shapes even more subtle on mobile */
+  .shape {
+    opacity: 0.05 !important;
+  }
+
+  /* Mobile card hover improvements */
+  .menu-card:hover,
+  .service-card:hover,
+  .event-card:hover {
+    transform: none !important;
+  }
+
+  .menu-card:active .card-title,
+  .service-card:active .card-title,
+  .event-card:active .card-title {
+    color: var(--gold-crayola) !important;
+  }
+
+  /* Mobile reservation form improvements */
+  .reservation-form {
+    margin: 20px !important;
+    border-radius: 10px !important;
+  }
+
+  .form-left,
+  .form-right {
+    padding: 30px 20px !important;
+  }
+
+  .form-left .headline-1 {
+    font-size: 2rem !important;
+  }
+
+  /* Mobile navbar menu items visibility */
+  .navbar-list {
+    background-color: var(--white) !important;
+  }
+
+  .navbar-item {
+    border-color: rgba(0,0,0,0.1) !important;
+  }
+
+  /* Mobile container adjustments */
+  .container {
+    max-width: 100% !important;
+    padding-inline: 20px !important;
+  }
+}
+
+/* Tablet responsive adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 900px !important;
+    padding-inline: 30px !important;
+  }
+}
+
+/* Desktop responsive adjustments */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1200px !important;
+    padding-inline: 40px !important;
+  }
+}
+
+/* When scrolled, header gets background color */
+.header.active {
+  background-color: var(--eerie-black-4) !important;
+  border-color: var(--black-alpha-15) !important;
+  padding-block: 20px !important;
+}
