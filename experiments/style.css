@@ -176,7 +176,7 @@ html {
 }
 
 body {
-  background-color: var(--white) !important;
+  background-color: var(--eerie-black-1);
   color: var(--white);
   font-family: var(--fontFamily-dm_sans);
   font-size: var(--fontSize-body-4);
@@ -606,16 +606,16 @@ body.nav-active { overflow: hidden; }
   left: 0;
   width: 100%;
   background-color: transparent;
-  padding-block: 20px;
+  padding-block: 40px;
   z-index: 4;
   border-block-end: 1px solid transparent;
   transition: var(--transition-1);
 }
 
 .header.active {
-  padding-block: 12px;
-  background-color: var(--white);
-  border-color: var(--gold-crayola);
+  padding-block: 20px;
+  background-color: var(--eerie-black-4);
+  border-color: var(--black-alpha-15);
 }
 
 .header.hide {
@@ -1287,17 +1287,6 @@ textarea.input-field {
   font-weight: var(--weight-bold);
   letter-spacing: var(--letterSpacing-2);
   margin-block-end: 5px;
-}
-
-.event-card .card-title,
-.event-card .card-text {
-  transition: var(--transition-1);
-}
-
-.event-card:hover .card-title,
-.event-card:hover .card-text,
-.event-card:hover .card-subtitle {
-  color: var(--gold-crayola) !important;
 }
 
 .event-card .card-banner .img-cover { transition: var(--transition-2); }
@@ -2151,214 +2140,4 @@ textarea.input-field {
     left: 0;
   }
 
-/* ------------------------------------------------------
-   Merged from custom.css (excluding header/navbar/topbar)
-   ------------------------------------------------------ */
-
-/* Global white theme base */
-body {
-  background-color: var(--white) !important;
-  color: var(--eerie-black-1) !important;
-  height: auto !important;
-  min-height: 100vh;
-  overflow-x: hidden !important;
-}
-html { overflow-x: hidden !important; scroll-behavior: smooth !important; }
-
-/* Buttons - gold accent */
-.btn-primary {
-  background-color: var(--gold-crayola) !important;
-  color: var(--eerie-black-1) !important;
-  border: 2px solid var(--gold-crayola) !important;
-}
-.btn-primary:hover {
-  background-color: transparent !important;
-  color: var(--gold-crayola) !important;
-}
-.btn-secondary {
-  background-color: transparent !important;
-  color: var(--gold-crayola) !important;
-  border: 2px solid var(--gold-crayola) !important;
-}
-.btn-secondary:hover {
-  background-color: var(--gold-crayola) !important;
-  color: var(--eerie-black-1) !important;
-}
-
-/* Section and backgrounds */
-.section { background-color: var(--white) !important; color: var(--eerie-black-1) !important; }
-.bg-black-10 { background-color: #f8f9fa !important; }
-
-/* Service, About, Menu, Event, Reservation sections */
-.service, .about, .special-dish, .menu, .event, .reservation { background-color: var(--white) !important; }
-
-/* Cards styling for light theme */
-.menu-card, .event-card {
-  background-color: var(--white) !important;
-  border: 1px solid #e9ecef !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-}
-
-/* Price and gold accents */
-.span.body-1 { color: var(--gold-crayola) !important; }
-.separator { background-color: var(--gold-crayola) !important; }
-
-
-}
-
-/* --- Preloader (from custom.css) --- */
-.preload { background-color: var(--white) !important; }
-.preload .text { color: var(--gold-crayola) !important; }
-
-/* --- Inputs & Forms (from custom.css) --- */
-.input-field, .textarea {
-  background-color: var(--white) !important;
-  border: 1px solid #e9ecef !important;
-  color: var(--eerie-black-1) !important;
-}
-.input-field::placeholder { color: #6c757d !important; opacity: 0.8 !important; }
-.input-field:focus, .textarea:focus {
-  border-color: var(--gold-crayola) !important;
-}
-/* Select styling */
-select.input-field { background-color: var(--white) !important; color: var(--eerie-black-1) !important; cursor: pointer !important; }
-select.input-field option { background-color: var(--white) !important; color: var(--eerie-black-1) !important; }
-/* Textarea */
-textarea.input-field { background-color: var(--white) !important; color: var(--eerie-black-1) !important; border: 1px solid #e9ecef !important; border-radius: 5px !important; resize: vertical !important; min-height: 120px !important; }
-
-/* --- Reservation section (from custom.css) --- */
-.reservation { background-color: var(--white) !important; color: var(--eerie-black-1) !important; padding: 80px 0 !important; }
-.form-left { background-color: var(--white) !important; padding: 50px 40px !important; }
-.form-right { background-color: #e9ecef !important; color: var(--eerie-black-1) !important; padding: 50px 40px !important; position: relative !important; }
-.form-right::before { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(233,236,239,0.95), rgba(233,236,239,0.95)) !important; z-index: 1; }
-.form-right > * { position: relative; z-index: 2; }
-.reservation-form { background-color: var(--white) !important; border-radius: 15px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important; overflow: hidden !important; margin-top: 0 !important; }
-.input-wrapper .input-field { flex: 1 !important; }
-.form-left .btn { background-color: var(--gold-crayola) !important; color: var(--eerie-black-1) !important; border: 2px solid var(--gold-crayola) !important; padding: 15px 30px !important; font-weight: var(--weight-bold) !important; text-transform: uppercase !important; letter-spacing: 1px !important; transition: all 0.3s ease !important; }
-.form-left .btn:hover { background-color: transparent !important; color: var(--gold-crayola) !important; transform: translateY(-2px) !important; box-shadow: 0 5px 15px rgba(218,165,32,0.3) !important; }
-.form-right .separator { background-color: var(--gold-crayola) !important; margin: 25px auto !important; }
-
-/* --- Footer newsletter alignment (from custom.css) --- */
-.footer-brand { background: linear-gradient(135deg, var(--white) 0%, #f8f9fa 100%) !important; color: var(--eerie-black-1) !important; border: 2px solid var(--gold-crayola) !important; border-radius: 15px !important; padding: 40px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important; }
-.footer-brand .logo img { filter: none !important; }
-.footer-brand .body-4, .footer-brand .label-1 { color: var(--eerie-black-1) !important; }
-.footer-brand .contact-link { color: var(--eerie-black-1) !important; }
-.footer-brand .contact-link:hover { color: var(--gold-crayola) !important; }
-.footer-brand .label-1 .span { color: var(--eerie-black-1) !important; }
-/* Newsletter input group */
-.footer-brand .input-wrapper { display: flex !important; align-items: stretch !important; gap: 0 !important; border-radius: 8px !important; overflow: hidden !important; }
-.footer-brand .icon-wrapper { flex: 1 1 auto !important; display: flex !important; align-items: center !important; background-color: var(--white) !important; border: 1px solid var(--gold-crayola) !important; border-right: none !important; padding-inline: 12px !important; margin: 0 !important; }
-.footer-brand .input-field { height: 56px !important; border: none !important; margin: 0 !important; width: 100% !important; }
-.footer-brand .btn { height: 56px !important; min-width: 140px !important; border: 1px solid var(--gold-crayola) !important; border-left: none !important; border-radius: 0 !important; }
-
-/* --- Mobile reservation tweaks --- */
-@media (max-width: 768px) {
-  .reservation-form { margin: 20px !important; border-radius: 10px !important; }
-  .form-left, .form-right { padding: 30px 20px !important; }
-}
-
-/* --- Main content spacing to avoid header overlap (except index) --- */
-main { padding-top: 120px !important; }
-body.home-page main { padding-top: 0 !important; } /* Index.html has no top padding */
-
-/* --- Container layouts (from custom.css) --- */
-.container { max-width: 1200px !important; margin: 0 auto !important; padding-inline: 16px !important; }
-/* Section-specific containers */
-.about .container, .menu .container, .testi .container, .features .container, .event .container { max-width: 1200px !important; margin: 0 auto !important; }
-/* Preserve service section layout */
-.service .container { max-width: unset !important; }
-/* Service grid staggered layout */
-@media (min-width: 1200px) {
-  .service .grid-list li:nth-child(2n+1) { transform: translateY(-160px) !important; }
-  .service .grid-list { gap: 150px !important; }
-}
-
-/* --- Service section (from custom.css) --- */
-.service { background-color: var(--white) !important; }
-.service-card { background-color: var(--white) !important; border: 1px solid var(--gold-crayola) !important; box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important; }
-.card-title:hover { color: var(--gold-crayola) !important; }
-
-/* --- Special dish section (from custom.css) --- */
-.special-dish { background-color: var(--white) !important; }
-.special-dish-content { background-color: #f8f9fa !important; }
-
-/* --- Features section (from custom.css) --- */
-.features { background-color: var(--white) !important; }
-.feature-card { background-color: var(--white) !important; border: 1px solid #e9ecef !important; box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important; }
-/* --- Testimonials section (from custom.css) --- */
-.testi { background-color: var(--white) !important; position: relative; }
-.testi::before { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)) !important; z-index: 1; }
-.testi .container { position: relative; z-index: 2; }
-.testi-text, .profile-name { color: var(--eerie-black-1) !important; }
-.quote { color: var(--gold-crayola) !important; }
-/* Profile image styling */
-.profile .img { display: block !important; width: 100px !important; height: 100px !important; object-fit: cover !important; border-radius: 50% !important; margin: 0 auto 15px auto !important; border: 3px solid var(--gold-crayola) !important; }
-
-/* --- Text colors and typography (from custom.css) --- */
-.headline-1, .headline-2, .title-1, .title-2, .title-3, .title-4 { color: var(--eerie-black-1) !important; }
-.body-1, .body-2, .body-3, .body-4 { color: var(--eerie-black-1) !important; }
-.label-1, .label-2 { color: var(--eerie-black-1) !important; }
-.section-subtitle { color: var(--gold-crayola) !important; }
-
-/* --- Index.html only: transparent header with white nav items --- */
-body.home-page .header:not(.active) .navbar-link .span { color: var(--white) !important; }
-body.home-page .header:not(.active) .navbar-link.active .span,
-body.home-page .header:not(.active) .navbar-link:hover .span { color: var(--gold-crayola) !important; }
-
-/* --- Find a Table button styling for index.html --- */
-/* Transparent header: gold bg + black text, hover = black bg + gold text */
-body.home-page .header:not(.active) .btn {
-  background-color: var(--gold-crayola) !important;
-  color: var(--eerie-black-1) !important;
-  border: 2px solid var(--gold-crayola) !important;
-}
-body.home-page .header:not(.active) .btn:hover {
-  background-color: var(--eerie-black-1) !important;
-  color: var(--gold-crayola) !important;
-  border-color: var(--gold-crayola) !important;
-}
-
-/* Sticky header: black bg + gold text, hover = gold bg + black text */
-body.home-page .header.active .btn {
-  background-color: var(--eerie-black-1) !important;
-  color: var(--gold-crayola) !important;
-  border: 2px solid var(--gold-crayola) !important;
-}
-body.home-page .header.active .btn:hover {
-  background-color: var(--gold-crayola) !important;
-  color: var(--eerie-black-1) !important;
-  border-color: var(--gold-crayola) !important;
-}
-
-/* --- Close button styling (from custom.css) --- */
-.close-btn { color: var(--eerie-black-1) !important; background-color: transparent !important; border-color: var(--eerie-black-1) !important; }
-.close-btn:hover { color: var(--gold-crayola) !important; border-color: var(--gold-crayola) !important; }
-
-/* --- Form text styling (from custom.css) --- */
-.form-text { color: var(--eerie-black-1) !important; }
-.form-label { color: var(--eerie-black-1) !important; font-weight: var(--weight-bold) !important; }
-/* --- Background image overlay (from custom.css) --- */
-.has-bg-image:not(.hero) { position: relative; }
-.has-bg-image:not(.hero)::before { content: ""; position: absolute; inset: 0; background-color: rgba(255,255,255,0.9) !important; z-index: 1; }
-.has-bg-image:not(.hero) > * { position: relative; z-index: 2; }
-
-/* --- Shapes and decorative elements (from custom.css) --- */
-.shape { opacity: 0.1 !important; }
-
-/* --- Responsive container adjustments (from custom.css) --- */
-@media (max-width: 768px) {
-  .shape { opacity: 0.05 !important; }
-  /* Mobile card hover improvements */
-  .menu-card:hover, .service-card:hover, .event-card:hover { transform: none !important; }
-  .menu-card:active .card-title, .service-card:active .card-title, .event-card:active .card-title { color: var(--gold-crayola) !important; }
-  /* Mobile container adjustments */
-  .container { max-width: 100% !important; padding-inline: 20px !important; }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .container { max-width: 900px !important; padding-inline: 30px !important; }
-}
-
-@media (min-width: 1025px) {
-  .container { max-width: 1200px !important; padding-inline: 40px !important; }
 }

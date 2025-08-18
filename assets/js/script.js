@@ -142,6 +142,17 @@ addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseout", autoSlide
 
 window.addEventListener("load", autoSlide);
 
+// Ensure header sticks at 0 on scroll and toggles active state
+window.addEventListener('scroll', () => {
+  const headerEl = document.querySelector('[data-header]');
+  if (!headerEl) return;
+  if (window.scrollY >= 50) {
+    headerEl.classList.add('active');
+  } else {
+    headerEl.classList.remove('active');
+  }
+});
+
 
 
 /**
@@ -168,3 +179,67 @@ window.addEventListener("mousemove", function (event) {
   }
 
 });
+
+
+
+/**
+ * MOBILE EVENT CARDS ANIMATION
+ * Trigger animation when event section comes into view on mobile
+ */
+
+const isMobile = window.innerWidth <= 768;
+
+if (isMobile) {
+  const eventList = document.querySelector('.event .grid-list');
+  const eventItems = eventList ? eventList.querySelectorAll(':scope > li') : [];
+
+  if (eventList && eventItems.length) {
+    let current = 0;
+
+    // Show only the first item initially
+    Array.from(eventItems).forEach((li, idx) => {
+      li.style.opacity = idx === 0 ? '1' : '0';
+      li.style.transition = 'opacity 600ms ease-in-out';
+    });
+
+    // Ensure the container has enough height to show full card
+    const setEventListHeight = () => {
+      let maxH = 0;
+      Array.from(eventItems).forEach(li => { maxH = Math.max(maxH, li.offsetHeight); });
+      if (maxH > 0) eventList.style.height = maxH + 'px';
+    };
+    setEventListHeight();
+    window.addEventListener('resize', setEventListHeight);
+
+    const cycleEvents = () => {
+      const next = (current + 1) % eventItems.length;
+      eventItems[current].style.opacity = '0';
+      eventItems[next].style.opacity = '1';
+      current = next;
+    };
+
+    const onEnter = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Start cycling when section enters viewport
+          if (!eventList.dataset.cycling) {
+            eventList.dataset.cycling = 'true';
+            // Set height again in case images finished loading
+            setEventListHeight();
+            eventList._cycleInterval = setInterval(cycleEvents, 2500);
+          }
+        } else {
+          // Pause when out of view
+          if (eventList.dataset.cycling && eventList._cycleInterval) {
+            clearInterval(eventList._cycleInterval);
+            eventList._cycleInterval = null;
+            delete eventList.dataset.cycling;
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(onEnter, { threshold: 0.2 });
+    observer.observe(eventList);
+  }
+}
