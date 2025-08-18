@@ -1274,8 +1274,8 @@ textarea.input-field {
   top: 30px;
   left: 25px;
   padding: 5px 10px;
-  color: var(--gold-crayola);
-  background-color: var(--black);
+  color: var(--eerie-black-1);
+  background-color: var(--gold-crayola);
   font-weight: var(--weight-bold);
   letter-spacing: var(--letterSpacing-1);
   line-height: 14px;
@@ -1520,9 +1520,9 @@ textarea.input-field {
 
   .topbar-item ion-icon { --ionicon-stroke-width: 60px; }
 
-  .topbar-item .span { font-size: var(--fontSize-label-1); }
+  .topbar-item .span { font-size: var(--fontSize-label-1); color: var(--white); }
 
-  .topbar .link { transition: var(--transition-1); }
+  .topbar .link { transition: var(--transition-1); color: var(--white); }
 
   .topbar .link:is(:hover, :focus-visible) { color: var(--gold-crayola); }
 
@@ -2318,10 +2318,10 @@ body.home-page .header:not(.active) .btn:hover {
   border-color: var(--gold-crayola) !important;
 }
 
-/* Sticky header: black bg + gold text, hover = gold bg + black text */
+/* Sticky header: black bg + white text, hover = gold bg + black text */
 body.home-page .header.active .btn {
   background-color: var(--eerie-black-1) !important;
-  color: var(--gold-crayola) !important;
+  color: var(--white) !important;
   border: 2px solid var(--gold-crayola) !important;
 }
 body.home-page .header.active .btn:hover {
