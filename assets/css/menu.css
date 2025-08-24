@@ -10,6 +10,9 @@
   display: flex;
   align-items: flex-start;
   gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  transition: var(--transition-1);
 }
 
 .hover\:card .card-banner { background-color: var(--gold-crayola); }
