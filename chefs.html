@@ -48,9 +48,9 @@
   <!--
     - preload images
   -->
-  <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slider-1.png">
+  <link rel="preload" as="image" href="./assets/images/hero-slider-2.png">
+  <link rel="preload" as="image" href="./assets/images/hero-slider-3.png">
 
 </head>
 
@@ -129,7 +129,19 @@
     <div class="container">
 
       <a href="index.html" class="logo">
-        <img src="./assets/images/peppinos-logo.png" width="90" height="24" alt="Peppinos - Home">
+        <div class="logo-container">
+          <div class="logo-spinner">
+            <div class="logo-face logo-face-1">
+              <img src="./assets/images/logo-1.png" width="360" height="114" alt="Peppino's Dosa - Home">
+            </div>
+            <div class="logo-face logo-face-2">
+              <img src="./assets/images/logo-2.png" width="360" height="114" alt="Peppino's Dosa - Home">
+            </div>
+            <div class="logo-face logo-face-3">
+              <img src="./assets/images/logo-3.png" width="360" height="114" alt="Peppino's Dosa - Home">
+            </div>
+          </div>
+        </div>
       </a>
 
       <nav class="navbar" data-navbar>
@@ -139,7 +151,19 @@
         </button>
 
         <a href="index.html" class="logo">
-          <img src="./assets/images/peppinos-logo.png" width="90" height="24" alt="Peppinos - Home">
+          <div class="logo-container">
+            <div class="logo-spinner">
+              <div class="logo-face logo-face-1">
+                <img src="./assets/images/logo-1.png" width="180" height="48" alt="Peppino's Dosa - Home">
+              </div>
+              <div class="logo-face logo-face-2">
+                <img src="./assets/images/logo-2.png" width="180" height="48" alt="Peppino's Dosa - Home">
+              </div>
+              <div class="logo-face logo-face-3">
+                <img src="./assets/images/logo-3.png" width="180" height="48" alt="Peppino's Dosa - Home">
+              </div>
+            </div>
+          </div>
         </a>
 
         <ul class="navbar-list">
@@ -177,6 +201,13 @@
           </li>
 
           <li class="navbar-item">
+            <a href="catering.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Catering</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
             <a href="contact.html" class="navbar-link hover-underline">
               <div class="separator"></div>
 
@@ -209,11 +240,17 @@
 
       </nav>
 
-      <a href="contact.html#reservation" class="btn btn-secondary">
-        <span class="text text-1">Find A Table</span>
+      <div class="header-actions">
+        <a href="https://www.google.com/maps/place/Peppino's+Dosa" target="_blank" class="btn btn-google" rel="noopener">
+          <span class="text text-1">Google Reviews</span>
+          <span class="text text-2" aria-hidden="true">Google Reviews</span>
+        </a>
 
-        <span class="text text-2" aria-hidden="true">Find A Table</span>
-      </a>
+        <a href="contact.html#reservation" class="btn btn-secondary">
+          <span class="text text-1">Find A Table</span>
+          <span class="text text-2" aria-hidden="true">Find A Table</span>
+        </a>
+      </div>
 
       <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
         <span class="line line-1"></span>
@@ -275,15 +312,135 @@
         - #TESTIMONIALS
       -->
 
+
+
+      <!--
+        - #CHEFS VIDEO
+      -->
+
+      <section class="section chefs-video" aria-label="chefs video">
+
+        <div class="video-container">
+          <div class="video-wrapper">
+            <video class="chef-video" poster="./assets/images/chef-cooking.png" preload="metadata">
+              <source src="./assets/videos/chef-cooking.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <div class="video-overlay">
+              <div class="play-btn" data-video-btn>
+                <ion-icon name="play" aria-hidden="true"></ion-icon>
+              </div>
+
+              <div class="overlay-content">
+                <h3 class="overlay-title">Chef Peppino & Chef Laddi</h3>
+                <p class="overlay-text">Masters of Authentic Indian Cuisine</p>
+              </div>
+            </div>
+
+            <div class="video-quotes">
+              <div class="floating-quote quote-1">"Authentic flavors from the heart"</div>
+              <div class="floating-quote quote-2">"Traditional recipes, modern excellence"</div>
+              <div class="floating-quote quote-3">"Passion in every dish we create"</div>
+              <div class="floating-quote quote-4">"Where spices tell their story"</div>
+              <div class="floating-quote quote-5">"Crafted with love and tradition"</div>
+              <div class="floating-quote quote-6">"Every bite tells our story"</div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        - #CHEF SPECIALTIES
+      -->
+
+      <section class="section features text-center" aria-label="chef specialties">
+        <div class="container">
+
+          <p class="section-subtitle label-2">Culinary Excellence</p>
+
+          <h2 class="headline-1 section-title">Our Chef's Specialties</h2>
+
+          <p class="section-text">
+            Discover the unique techniques and signature dishes that make Chef Peppino and Chef Laddi masters of their craft.
+          </p>
+
+          <ul class="grid-list">
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="Traditional Techniques">
+                </div>
+
+                <h3 class="title-2 card-title">Traditional Techniques</h3>
+
+                <p class="label-1 card-text">Authentic cooking methods passed down through generations, ensuring every dish maintains its original flavors.</p>
+
+              </div>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-2.png" width="100" height="80" loading="lazy" alt="Spice Mastery">
+                </div>
+
+                <h3 class="title-2 card-title">Spice Mastery</h3>
+
+                <p class="label-1 card-text">Expert knowledge of spice combinations and timing to create perfectly balanced and aromatic dishes.</p>
+
+              </div>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-3.png" width="100" height="80" loading="lazy" alt="Dosa Artistry">
+                </div>
+
+                <h3 class="title-2 card-title">Dosa Artistry</h3>
+
+                <p class="label-1 card-text">Perfecting the art of crispy, golden dosas with the ideal texture and flavor combinations.</p>
+
+              </div>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-4.png" width="100" height="80" loading="lazy" alt="Regional Expertise">
+                </div>
+
+                <h3 class="title-2 card-title">Regional Expertise</h3>
+
+                <p class="label-1 card-text">Mastery of both North and South Indian cuisines, bringing diverse regional flavors to your table.</p>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <!--
+        - #CHEF TESTIMONIAL
+      -->
+
       <section class="section testi text-center has-bg-image"
-        style="background-image: url('./assets/images/testimonial-bg.jpg')" aria-label="testimonials">
+        style="background-image: url('./assets/images/testimonial-bg.png')" aria-label="chef testimonials">
         <div class="container">
 
           <div class="quote">"</div>
 
           <p class="headline-2 testi-text">
-            I wanted to thank you for inviting me down for that amazing dinner the other night. The food was
-            extraordinary.
+            Chef Peppino and Chef Laddi have created something truly special here. Their passion for authentic Indian cuisine shines through in every dish they prepare.
           </p>
 
           <div class="wrapper">
@@ -293,10 +450,11 @@
           </div>
 
           <div class="profile">
-            <img src="./assets/images/testi-avatar.jpg" width="100" height="100" loading="lazy" alt="Sam Jhonson"
+            <img src="./assets/images/testi-avatar.jpg" width="100" height="100" loading="lazy" alt="Food Critic"
               class="img">
 
-            <p class="label-2 profile-name">Sam Jhonson</p>
+            <p class="label-2 profile-name">Maria Rodriguez</p>
+            <p class="body-4">Food Critic, Boston Globe</p>
           </div>
 
         </div>
@@ -322,7 +480,7 @@
         <div class="footer-brand has-before has-after">
 
           <a href="index.html" class="logo">
-            <img src="./assets/images/peppinos-logo.png" width="90" height="24" loading="lazy" alt="peppinos home">
+            <img src="./assets/images/logo-1.png" width="90" height="24" loading="lazy" alt="peppinos home">
           </a>
 
           <address class="body-4">
@@ -370,23 +528,31 @@
         <ul class="footer-list">
 
           <li>
-            <a href="index.html" class="label-2 footer-link hover-underline">Home</a>
+            <a href="index.html" class="text-white footer-link hover-underline">Home</a>
           </li>
 
           <li>
-            <a href="menu.html" class="label-2 footer-link hover-underline">Menus</a>
+            <a href="menu.html" class="text-white footer-link hover-underline">Menus</a>
           </li>
 
           <li>
-            <a href="about.html" class="label-2 footer-link hover-underline">About Us</a>
+            <a href="about.html" class="text-white footer-link hover-underline">About Us</a>
           </li>
 
           <li>
-            <a href="chefs.html" class="label-2 footer-link hover-underline">Our Chefs</a>
+            <a href="chefs.html" class="text-white footer-link hover-underline">Our Chefs</a>
           </li>
 
           <li>
-            <a href="contact.html" class="label-2 footer-link hover-underline">Contact</a>
+            <a href="catering.html" class="text-white footer-link hover-underline">Catering</a>
+          </li>
+
+          <li>
+            <a href="blog.html" class="text-white footer-link hover-underline">Blog</a>
+          </li>
+
+          <li>
+            <a href="contact.html" class="text-white footer-link hover-underline">Contact</a>
           </li>
 
         </ul>
@@ -394,23 +560,23 @@
         <ul class="footer-list">
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Facebook</a>
+            <a href="#" class="text-white footer-link hover-underline">Facebook</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Instagram</a>
+            <a href="#" class="text-white footer-link hover-underline">Instagram</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Twitter</a>
+            <a href="#" class="text-white footer-link hover-underline">Twitter</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Youtube</a>
+            <a href="#" class="text-white footer-link hover-underline">Youtube</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Google Map</a>
+            <a href="#" class="text-white footer-link hover-underline">Google Map</a>
           </li>
 
         </ul>
@@ -420,8 +586,7 @@
       <div class="footer-bottom">
 
         <p class="copyright">
-          &copy; 2022 Peppinos. All Rights Reserved | Crafted by <a href="https://github.com/codewithsadee"
-            target="_blank" class="link">codewithsadee</a>
+          &copy; 2025 Peppinos. All Rights Reserved
         </p>
 
       </div>

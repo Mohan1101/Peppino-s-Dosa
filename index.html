@@ -85,7 +85,7 @@
       <div class="separator"></div>
 
       <div class="topbar-item item-2">
-        <div class="icon">
+        <div class="icon text-white">
           <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
         </div>
 
@@ -125,7 +125,19 @@
     <div class="container">
 
       <a href="index.html" class="logo">
-        <img src="./assets/images/peppinos-logo.png" width="120" height="38" alt="Peppino's Dosa - Home">
+        <div class="logo-container">
+          <div class="logo-spinner">
+            <div class="logo-face logo-face-1">
+              <img src="./assets/images/logo-1.png" width="360" height="114" alt="Peppino's Dosa - Home">
+            </div>
+            <div class="logo-face logo-face-2">
+              <img src="./assets/images/logo-2.png" width="360" height="114" alt="Peppino's Dosa - Home">
+            </div>
+            <div class="logo-face logo-face-3">
+              <img src="./assets/images/logo-3.png" width="360" height="114" alt="Peppino's Dosa - Home">
+            </div>
+          </div>
+        </div>
       </a>
 
       <nav class="navbar" data-navbar>
@@ -135,7 +147,19 @@
         </button>
 
         <a href="index.html" class="logo">
-          <img src="./assets/images/peppinos-logo.png" width="120" height="38" alt="Peppino's Dosa - Home">
+          <div class="logo-container">
+            <div class="logo-spinner">
+              <div class="logo-face logo-face-1">
+                <img src="./assets/images/logo-1.png" width="180" height="48" alt="Peppino's Dosa - Home">
+              </div>
+              <div class="logo-face logo-face-2">
+                <img src="./assets/images/logo-2.png" width="180" height="48" alt="Peppino's Dosa - Home">
+              </div>
+              <div class="logo-face logo-face-3">
+                <img src="./assets/images/logo-3.png" width="180" height="48" alt="Peppino's Dosa - Home">
+              </div>
+            </div>
+          </div>
         </a>
 
         <ul class="navbar-list">
@@ -173,6 +197,13 @@
           </li>
 
           <li class="navbar-item">
+            <a href="catering.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+              <span class="span">Catering</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
             <a href="contact.html" class="navbar-link hover-underline">
               <div class="separator"></div>
 
@@ -205,11 +236,17 @@
 
       </nav>
 
-      <a href="contact.html" class="btn btn-secondary">
-        <span class="text text-1">Find A Table</span>
+      <div class="header-actions">
+        <a href="https://www.google.com/maps/place/Peppino's+Dosa" target="_blank" class="btn btn-google" rel="noopener">
+          <span class="text text-1">Google Reviews</span>
+          <span class="text text-2" aria-hidden="true">Google Reviews</span>
+        </a>
 
-        <span class="text text-2" aria-hidden="true">Find A Table</span>
-      </a>
+        <a href="contact.html" class="btn btn-secondary">
+          <span class="text text-1">Find A Table</span>
+          <span class="text text-2" aria-hidden="true">Find A Table</span>
+        </a>
+      </div>
 
       <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
         <span class="line line-1"></span>
@@ -428,6 +465,46 @@
             class="shape shape-2 move-anim">
 
         </div>
+      </section>
+
+
+
+
+      <!--
+        - #CHEFS VIDEO
+      -->
+
+      <section class="section chefs-video" aria-label="chefs video">
+
+        <div class="video-container">
+          <div class="video-wrapper">
+            <video class="chef-video" poster="./assets/images/chef-cooking.png" preload="metadata">
+              <source src="./assets/videos/chef-cooking.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <div class="video-overlay">
+              <div class="play-btn" data-video-btn>
+                <ion-icon name="play" aria-hidden="true"></ion-icon>
+              </div>
+
+              <div class="overlay-content">
+                <h3 class="overlay-title">Chef Peppino & Chef Laddi</h3>
+                <p class="overlay-text">Masters of Authentic Indian Cuisine</p>
+              </div>
+            </div>
+
+            <div class="video-quotes">
+              <div class="floating-quote quote-1">"Authentic flavors from the heart"</div>
+              <div class="floating-quote quote-2">"Traditional recipes, modern excellence"</div>
+              <div class="floating-quote quote-3">"Passion in every dish we create"</div>
+              <div class="floating-quote quote-4">"Where spices tell their story"</div>
+              <div class="floating-quote quote-5">"Crafted with love and tradition"</div>
+              <div class="floating-quote quote-6">"Every bite tells our story"</div>
+            </div>
+          </div>
+        </div>
+
       </section>
 
 
@@ -745,7 +822,7 @@
         - #TESTIMONIALS
       -->
 
-      <section class="section testi text-center has-bg-image"
+      <section class="section testi  text-center has-bg-image"
         style="background-image: url('./assets/images/testimonial-bg.png')" aria-label="testimonials">
         <div class="container">
 
@@ -868,27 +945,27 @@
 
               <p class="contact-label">Booking Request</p>
 
-              <a href="tel:+88123123456" class="body-1 contact-number hover-underline">+88-123-123456</a>
+              <a href="tel:+88123123456" class="text-4xl text-black contact-number hover-underline">+88-123-123456</a>
 
               <div class="separator"></div>
 
               <p class="contact-label">Location</p>
 
-              <address class="body-4">
+              <address class="text-black">
                 Dosa Street, Flavor City, <br>
                 London 9578, UK
               </address>
 
               <p class="contact-label">Lunch Time</p>
 
-              <p class="body-4">
+              <p class="text-black">
                 Monday to Sunday <br>
                 11.00 am - 2.30pm
               </p>
 
               <p class="contact-label">Dinner Time</p>
 
-              <p class="body-4">
+              <p class="text-black">
                 Monday to Sunday <br>
                 05.00 pm - 10.00pm
               </p>
@@ -995,41 +1072,41 @@
       <section class="section event bg-black-10" aria-label="event">
         <div class="container">
 
-          <p class="section-subtitle label-2 text-center">Recent Updates</p>
+          <p class="section-subtitle label-2 text-center">Latest Stories</p>
 
-          <h2 class="section-title headline-1 text-center">Upcoming Event</h2>
+          <h2 class="section-title headline-1 text-center">Our Blog</h2>
 
           <ul class="grid-list">
 
             <li>
-              <div class="event-card has-before hover:shine">
+              <a href="blog-detail-1.html" class="event-card has-before hover:shine">
 
                 <div class="card-banner img-holder" style="--width: 350; --height: 450;">
                   <img src="./assets/images/event-1.png" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
 
-                  <time class="publish-date label-2" datetime="2022-09-15">15/09/2022</time>
+                  <time class="publish-date label-2" datetime="2024-01-15">15/01/2024</time>
                 </div>
 
                 <div class="card-content">
-                  <p class="card-subtitle label-2 text-center">Food, Flavour</p>
+                  <p class="card-subtitle label-2 text-center">Cooking Tips</p>
 
                   <h3 class="card-title title-2 text-center">
                     Flavour so good you’ll try to eat with your eyes.
                   </h3>
                 </div>
 
-              </div>
+              </a>
             </li>
 
             <li>
-              <div class="event-card has-before hover:shine">
+              <a href="blog-detail-2.html" class="event-card has-before hover:shine">
 
                 <div class="card-banner img-holder" style="--width: 350; --height: 450;">
                   <img src="./assets/images/event-2.png" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
 
-                  <time class="publish-date label-2" datetime="2022-09-08">08/09/2022</time>
+                  <time class="publish-date label-2" datetime="2024-01-08">08/01/2024</time>
                 </div>
 
                 <div class="card-content">
@@ -1040,28 +1117,28 @@
                   </h3>
                 </div>
 
-              </div>
+              </a>
             </li>
 
             <li>
-              <div class="event-card has-before hover:shine">
+              <a href="blog-detail-3.html" class="event-card has-before hover:shine">
 
                 <div class="card-banner img-holder" style="--width: 350; --height: 450;">
                   <img src="./assets/images/event-3.png" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
 
-                  <time class="publish-date label-2" datetime="2022-09-03">03/09/2022</time>
+                  <time class="publish-date label-2" datetime="2024-01-03">03/01/2024</time>
                 </div>
 
                 <div class="card-content">
-                  <p class="card-subtitle label-2 text-center">Recipie</p>
+                  <p class="card-subtitle label-2 text-center">Recipe</p>
 
                   <h3 class="card-title title-2 text-center">
                     Flavour so good you’ll try to eat with your eyes.
                   </h3>
                 </div>
 
-              </div>
+              </a>
             </li>
 
           </ul>
@@ -1095,7 +1172,7 @@
         <div class="footer-brand has-before has-after">
 
           <a href="index.html" class="logo">
-            <img src="./assets/images/peppinos-logo.png" width="120" height="38" loading="lazy" alt="Peppino's Dosa home">
+            <img src="./assets/images/logo-1.png" width="120" height="38" loading="lazy" alt="Peppino's Dosa home">
           </a>
 
           <address class="body-4">
@@ -1143,23 +1220,31 @@
         <ul class="footer-list">
 
           <li>
-            <a href="index.html" class="label-2 footer-link hover-underline">Home</a>
+            <a href="index.html" class="text-white footer-link hover-underline">Home</a>
           </li>
 
           <li>
-            <a href="menu.html" class="label-2 footer-link hover-underline">Menus</a>
+            <a href="menu.html" class="text-white footer-link hover-underline">Menus</a>
           </li>
 
           <li>
-            <a href="about.html" class="label-2 footer-link hover-underline">About Us</a>
+            <a href="about.html" class="text-white footer-link hover-underline">About Us</a>
           </li>
 
           <li>
-            <a href="chefs.html" class="label-2 footer-link hover-underline">Our Chefs</a>
+            <a href="chefs.html" class="text-white footer-link hover-underline">Our Chefs</a>
           </li>
 
           <li>
-            <a href="contact.html" class="label-2 footer-link hover-underline">Contact</a>
+            <a href="catering.html" class="text-white footer-link hover-underline">Catering</a>
+          </li>
+
+          <li>
+            <a href="blog.html" class="text-white footer-link hover-underline">Blog</a>
+          </li>
+
+          <li>
+            <a href="contact.html" class="text-white footer-link hover-underline">Contact</a>
           </li>
 
         </ul>
@@ -1167,23 +1252,23 @@
         <ul class="footer-list">
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Facebook</a>
+            <a href="#" class="text-white footer-link hover-underline">Facebook</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Instagram</a>
+            <a href="#" class="text-white footer-link hover-underline">Instagram</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Twitter</a>
+            <a href="#" class="text-white footer-link hover-underline">Twitter</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Youtube</a>
+            <a href="#" class="text-white footer-link hover-underline">Youtube</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Google Map</a>
+            <a href="#" class="text-white footer-link hover-underline">Google Map</a>
           </li>
 
         </ul>
@@ -1193,8 +1278,7 @@
       <div class="footer-bottom">
 
         <p class="copyright">
-          &copy; 2022 Grilli. All Rights Reserved | Crafted by <a href="https://github.com/codewithsadee"
-            target="_blank" class="link">codewithsadee</a>
+          &copy; 2025 Peppinos. All Rights Reserved
         </p>
 
       </div>
