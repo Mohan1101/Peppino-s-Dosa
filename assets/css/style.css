@@ -753,16 +753,91 @@ body.nav-active {
   transform: rotateY(-240deg);
 }
 
-/* Mobile logo size */
+/* Mobile header and logo adjustments */
 @media (max-width: 768px) {
+  /* Larger logo on mobile */
   .logo-container {
-    width: 180px;
-    height: 48px;
+    width: 360px;
+    height: 114px;
+    transform: scale(0.9); /* Larger scale for mobile */
+    transform-origin: center center;
   }
 
   .logo-face img {
-    width: 180px;
-    height: 48px;
+    width: 360px;
+    height: 114px;
+  }
+
+  /* Mobile header height adjustments */
+  .header {
+    min-height: 120px !important; /* Accommodate larger mobile logo */
+    padding-block: 20px !important;
+  }
+
+  .header.active {
+    min-height: 100px !important;
+    padding-block: 12px !important;
+  }
+
+  /* Center logo in header on mobile */
+  .header .container {
+    padding-inline: 15px !important;
+    gap: 0 !important;
+    position: relative;
+    justify-content: center !important; /* Center the content */
+    height: 100%;
+  }
+
+  /* Center the logo */
+  .logo {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 5;
+  }
+
+  /* Position hamburger menu on the right */
+  .nav-open-btn {
+    padding: 8px !important;
+    padding-inline-end: 0 !important;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  /* Hamburger icon color - black by default on mobile */
+  .nav-open-btn .line {
+    background-color: var(--eerie-black-1) !important;
+  }
+
+  /* Index.html specific - white hamburger initially */
+  body.home-page .header:not(.active) .nav-open-btn .line {
+    background-color: var(--white) !important;
+  }
+
+  /* Index.html - black hamburger when sticky */
+  body.home-page .header.active .nav-open-btn .line {
+    background-color: var(--eerie-black-1) !important;
+  }
+
+  /* Hide the sidebar logo so header logo shows through overlay */
+  .navbar .logo {
+    display: none !important;
+  }
+
+  /* Add space at top of navbar where logo would be */
+  .navbar-list {
+    margin-top: 140px !important; /* Space for logo area */
+    padding-top: 20px !important;
+  }
+
+  /* Hide hamburger menu when sidebar is open */
+  .header:has(.navbar.active) .nav-open-btn {
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    transition: opacity 0.3s ease;
   }
 }
 
@@ -908,16 +983,20 @@ body.home-page .btn-google:hover {
   left: 0;
   width: 100%;
   background-color: transparent;
-  padding-block: 20px;
+  padding-block: 25px;
   z-index: 100;
   border-block-end: 1px solid transparent;
   transition: var(--transition-1);
+  min-height: 140px; /* Ensure header accommodates logo */
+  display: flex;
+  align-items: center;
 }
 
 .header.active {
-  padding-block: 12px;
+  padding-block: 15px;
   background-color: var(--white);
   border-color: var(--gold-crayola);
+  min-height: 120px; /* Slightly smaller when sticky */
 }
 
 .header.hide {
@@ -929,14 +1008,19 @@ body.home-page .btn-google:hover {
   max-width: 100% !important;
   padding-inline: 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 8px;
+  position: relative;
 }
 
 .nav-open-btn {
   padding: 12px;
   padding-inline-end: 0;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .nav-open-btn .line {
